@@ -11,20 +11,24 @@
 <body class="bg-[#F5FFF6]">
     <!-- Nav Section -->
     <header class="bg-white">
-        <nav class="flex justify-between max-w-[1980] mx-auto h-[100px]p-10 my-60px ">
-            <div class="logo  flex justify-center items-center gap-3 p-2 ">
-                <img src="./assets/logo.png" alt="" class="w-16">
+        <nav class="flex justify-between items-center w-11/12 mx-auto  ">
+            <div class="logo  flex lg:flex-col flex-row justify-center items-center gap-3 p-2 ">
+                <img src="./assets/logo.png" alt="" class="w-12">
                 <h1 class="text-4xl font-bold text-green-900">Emergency <br> Service</h1>
             </div>
             <div class="right text-xl w-[10] flex justify-center items-center gap-3 p-2">
-                <p>0</p>
-                <img src="./assets/heart.png" alt=""class="w-12">
-                <div class="flex justify-center items-center gap-3 p-2">
-                    <p>100</p>
-                    <img src="./assets/coin.png" alt="" class="w-12">                
+              <div class="flex justify-center items-center gap-3 bg-[#ECFFF0] rounded-4xl w-30">
+                  <span class="">
+                    <p id="heart-counter">0</p></span>  
+                <span class="" >
+                  <img src="./assets/heart.png" alt=""class="w-12">
+                </span>
+              </div>
+                <div class=" flex justify-center items-center gap-3 p-2 bg-[#ECFFF0] rounded-4xl w-30">
+                    <p id="coin-counter">100</p>
+                    <img src="./assets/coin.png" alt="" class="w-10  ">                
                 </div>
-                <br>
-                 <button class="btn bg-green-700 text-white rounded-3xl w-30">Copy</button>
+                 <span class="bg-green-700 text-white text-center rounded-4xl w-30">Copy</span>
             </div>
         </nav>
     </header>
@@ -37,16 +41,16 @@
             </div>
          </div>
      <!-- Main Section  -->
-         <div class="card-container p-5 w-11/12 mx-auto grid grid-cols-5 gap-4">
+         <div class="container mt-5 mx-auto grid grid-cols-5 gap-4">
   
   <!-- Left Side (Cards Section, 4 columns) -->
-  <div class="col-span-4 grid grid-cols-3 gap-4">
+  <div class=" col-span-4 grid lg:grid-cols-3 grid-cols-1 gap-4">
     
     <!-- Emergency Card 1 -->
     <div class="emergency-card bg-white p-4 rounded-lg shadow-md h-[300px]">
       <div class="flex justify-between items-center h-[80px]">
         <img src="./assets/emergency.png" alt="Emergency" class="w-16 h-16 bg-[#FDE3E2] p-3 rounded-xl">
-        <span><i class="fa-regular fa-heart"></i></span>
+        <button class="cursor-pointer"><i class="fa-regular fa-heart"></i></button>
       </div>
       <h1 class="text-md font-bold mt-3">National Emergency Number</h1>
       <p>National Emergency</p>
@@ -68,7 +72,7 @@
     <div class="emergency-card bg-white p-4 rounded-lg shadow-md h-[300px]">
       <div class="flex justify-between items-center h-[80px]">
         <img src="./assets/police.png" alt="Emergency" class="w-16 h-16 bg-[#DFEFFF] p-3 rounded-xl">
-        <span><i class="fa-regular fa-heart"></i></span>
+        <button class="cursor-pointer"><i class="fa-regular fa-heart"></i></button>
       </div>
       <h1 class="text-md font-bold mt-3">Police Help Line</h1>
       <p>Police</p>
@@ -90,7 +94,7 @@
     <div class="emergency-card bg-white p-4 rounded-lg shadow-md h-[300px]">
       <div class="flex justify-between items-center h-[80px]">
         <img src="./assets/fire-service.png" alt="Emergency" class="w-16 h-16 bg-[#FDE3E2] p-3 rounded-xl ">
-        <span><i class="fa-regular fa-heart"></i></span>
+       <button class="cursor-pointer"><i class="fa-regular fa-heart"></i></button>
       </div>
       <h1 class="text-md font-bold mt-3">Fire Service Number</h1>
       <p>Fire Service</p>
@@ -112,7 +116,7 @@
     <div class="emergency-card bg-white p-4 rounded-lg shadow-md h-[300px]">
       <div class="flex justify-between items-center h-[80px]">
         <img src="./assets/ambulance.png" alt="Emergency" class="w-16 h-16 bg-[#FDE3E2] p-3 rounded-xl">
-        <span><i class="fa-regular fa-heart"></i></span>
+        <button class="cursor-pointer"><i class="fa-regular fa-heart"></i></button>
       </div>
       <h1 class="text-md font-bold mt-3">Ambulance</h1>
       <p>Ambulance</p>
@@ -133,8 +137,8 @@
     <!-- Emergency Card 5 -->
     <div class="emergency-card bg-white p-4 rounded-lg shadow-md h-[300px]">
       <div class="flex justify-between items-center h-[80px]">
-        <img src="./assets/emergency.png" alt="Emergency" class="w-16 h-16 bg-[#FDE3E2] p-3 rounded-xl">
-        <span><i class="fa-regular fa-heart"></i></span>
+        <img src="./assets/Woman & Children.png" alt="Emergency" class="w-16 h-16 bg-[#FDE3E2] p-3 rounded-xl">
+        <button class="cursor-pointer"><i class="fa-regular fa-heart"></i></button>
       </div>
       <h1 class="text-md font-bold mt-3">Woman & Child Helpline</h1>
       <p>Woman & Child Helpline</p>
@@ -156,7 +160,7 @@
     <div class="emergency-card bg-white p-4 rounded-lg shadow-md h-[300px]">
       <div class="flex justify-between items-center h-[80px]">
         <img src="./assets/emergency.png" alt="Emergency" class="w-16 h-16 bg-[#FDE3E2] p-3 rounded-xl">
-        <span><i class="fa-regular fa-heart"></i></span>
+       <button class="cursor-pointer"><i class="fa-regular fa-heart"></i></button>
       </div>
       <h1 class="text-md font-bold mt-3">Anti-Corruption Helpline</h1>
       <p>Anti Corruption</p>
@@ -177,8 +181,8 @@
     <!-- Emergency Card 7 -->
     <div class="emergency-card bg-white p-4 rounded-lg shadow-md h-[300px]">
       <div class="flex justify-between items-center h-[80px]">
-        <img src="./assets/emergency.png" alt="Emergency" class="w-16 h-16 bg-[#FDE3E2] p-3 rounded-xl">
-        <span><i class="fa-regular fa-heart"></i></span>
+        <img src="./assets/Electiricity.jpg" alt="Emergency" class="w-16 h-16 bg-[#FDE3E2] p-3 rounded-xl">
+        <button class="cursor-pointer"><i class="fa-regular fa-heart"></i></button>
       </div>
       <h1 class="text-md font-bold mt-3">Electrycity Helpline</h1>
       <p>Electrycity Outage</p>
@@ -200,7 +204,7 @@
     <div class="emergency-card bg-white p-4 rounded-lg shadow-md h-[300px]">
       <div class="flex justify-between items-center h-[80px]">
         <img src="./assets/brac.png" alt="Emergency" class="w-16 h-16 bg-[#FDE3E2] p-3 rounded-xl">
-        <span><i class="fa-regular fa-heart"></i></span>
+        <button class="cursor-pointer"><i class="fa-regular fa-heart"></i></button>
       </div>
       <h1 class="text-md font-bold mt-3">Brac Helpline</h1>
       <p>Brac</p>
@@ -221,8 +225,8 @@
     <!-- Emergency Card 9 -->
     <div class="emergency-card bg-white p-4 rounded-lg shadow-md h-[300px]">
       <div class="flex justify-between items-center h-[80px]">
-        <img src="./assets/emergency.png" alt="Emergency" class="w-16 h-16 bg-[#FDE3E2] p-3 rounded-xl">
-        <span><i class="fa-regular fa-heart"></i></span>
+        <img src="./assets/Bangladesh-Railway.png" alt="Emergency" class="w-16 h-16 bg-[#FDE3E2] p-3 rounded-xl">
+        <button class="cursor-pointer"><i class="fa-regular fa-heart"></i></button>
       </div>
       <h1 class="text-md font-bold mt-3">Bangladesh Railway</h1>
       <p>Bangladesh Railway</p>
@@ -243,7 +247,7 @@
   </div>
 
   <!-- Right Side (Call History, 1 column) -->
-  <aside class="bg-white col-span-1 p-3 rounded-lg shadow-md">
+  <aside class="bg-white lg:col-span-1 col-span-2 p-3 rounded-lg shadow-md w-full">
     <div class="flex justify-between">
         <div class="flex justify-center items-center gap">
         <div>
@@ -255,12 +259,32 @@
     </div>
     <div>
         <button class="btn bg-green-700 text-white rounded-3xl w-20">Clear</button>
-    </div></div>
-    <ul class="list-disc pl-5">
-      <li>999 – 2 min ago</li>
-      <li>199 – 5 min ago</li>
-      <li>108 – 15 min ago</li>
-    </ul>
+    </div>
+  </div>
+    <div class="flex justify-center items-center bg-[#FAFAFA] p-2 mt-3">
+      <div> <h2 class="font-bold">Fire Service Number</h2>
+      <h4>999</h4>
+    </div>
+    <div>
+      <h4>11:36:58 AM</h4>
+    </div>
+    </div>
+    <div class="flex justify-center items-center bg-[#FAFAFA] p-2 mt-3">
+      <div> <h2 class="font-bold">National Emergency Number</h2>
+      <h4>999</h4>
+    </div>
+    <div>
+      <h4>11:36:58 AM</h4>
+    </div>
+    </div>
+    <div class="flex justify-center items-center bg-[#FAFAFA] p-2 mt-3">
+      <div> <h2 class="font-bold">Fire Service Number</h2>
+      <h4>999</h4>
+    </div>
+    <div>
+      <h4>11:36:58 AM</h4>
+    </div>
+    </div>
   </aside>
 
 </div>
