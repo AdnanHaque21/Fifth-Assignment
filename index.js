@@ -5,8 +5,6 @@ heartButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     heartCount++;
     heartCounter.textContent = heartCount;
-
-    // হার্টকে solid করে highlight দেখানো
     btn.classList.remove("fa-regular");
     btn.classList.add("fa-solid", "text-red-500");
   });
@@ -40,9 +38,7 @@ function addCallHistory(name, number) {
     list.id = "history-list";
     historySection.appendChild(list);
   }
-
   const list = document.getElementById("history-list");
-
   const item = document.createElement("div");
   item.className = "flex justify-between items-center bg-[#FAFAFA] p-2 mt-3 rounded";
   item.innerHTML = `
@@ -54,10 +50,8 @@ function addCallHistory(name, number) {
       <h4>${new Date().toLocaleTimeString()}</h4>
     </div>
   `;
-
   list.prepend(item); 
 }
-
 
 const clearBtn = document.querySelector("aside button");
 clearBtn.addEventListener("click", () => {
@@ -66,3 +60,51 @@ clearBtn.addEventListener("click", () => {
     list.innerHTML = "";
   }
 });
+
+let copyCount = 0;
+let callHistoryContainer = document.querySelector("aside");
+
+document.querySelectorAll(".emergency-card .fa-copy").forEach((copyBtn) => {
+  copyBtn.parentElement.addEventListener("click", function () {
+ 
+    let card = this.closest(".emergency-card");
+    let number = card.querySelector("h1.text-xl").innerText;
+
+    navigator.clipboard.writeText(number).then(() => {
+      copyCount++;
+      document.getElementById("coin-counter").innerText = 100 + copyCount; 
+      alert(`Copied: ${number}`);
+    });
+  });
+});
+
+document.querySelectorAll(".emergency-card .fa-phone").forEach((callBtn) => {
+  callBtn.parentElement.addEventListener("click", function () {
+    let card = this.closest(".emergency-card");
+    let title = card.querySelector("h1.text-md").innerText;
+    let number = card.querySelector("h1.text-xl").innerText;
+
+    let now = new Date();
+    let time = now.toLocaleTimeString();
+
+    let callHistoryContainer = document.querySelector("aside");
+    let div = document.createElement("div");
+    div.className = "flex justify-between items-center bg-[#FAFAFA] p-2 mt-3";
+    div.innerHTML = `
+      <div>
+        <h2 class="font-bold">${title}</h2>
+        <h4>${number}</h4>
+      </div>
+      <div>
+        <h4>${time}</h4>
+      </div>
+    `;
+    callHistoryContainer.appendChild(div);
+  });
+});
+
+document.querySelector("aside button").addEventListener("click", function () {
+  let items = callHistoryContainer.querySelectorAll("div.flex.justify-between ~ div");
+  items.forEach(item => item.remove());
+});
+
